@@ -1,8 +1,7 @@
-int maxArea(vector<int>& height) {
+  int maxArea(vector<int>& height) {
         int left = 0;
         int right = height.size() - 1;
         int maxArea = 0;
-
         while (left < right) {
             int currentArea = min(height[left], height[right]) * (right - left);
             maxArea = max(maxArea, currentArea);
@@ -13,7 +12,6 @@ int maxArea(vector<int>& height) {
                 right--;
             }
         }
-
         return maxArea;
     }
 };
